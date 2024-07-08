@@ -5,9 +5,10 @@ Hi there! 👋 Welcome to my project, developed with the primary goal of learnin
 
 I hope it's helpful for anyone looking or building something like this.
 
+<kbd>![Local Image](https://github.com/jakkapan1789/Floating-chatbot-widget/blob/main/example-1.jpg)</kbd>
+<kbd>![Local Image](https://github.com/jakkapan1789/Floating-chatbot-widget/blob/main/example-2.jpg)</kbd>
 ### This is an example integration. Floating-chatbot-widget to HTML
 
-![Local Image](https://github.com/jakkapan1789/Floating-chatbot-widget/blob/main/example.png)
 ```html
 <!DOCTYPE  html>
 <html  lang="en">
