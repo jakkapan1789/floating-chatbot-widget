@@ -1,0 +1,204 @@
+
+  @font-face {
+    font-family: 'Kanit';
+    src: url('./fonts/Kanit/Kanit-Regular.ttf') format('truetype');
+  }
+  .agent-chatButton {
+      appearance: none;
+      position: fixed;
+      bottom: 20px;
+      right: 25px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      box-shadow: rgba(1, 1, 1, 0.24) 0px 3px 8px;
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .agent-chatButton:focus {
+      outline: none;
+      box-shadow: none;
+    }
+    .agent-chatButton img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .agent-chatButton img {
+        animation: zoom-in-out 2s infinite ease-in-out;
+      }
+    }
+    @keyframes zoom-in-out {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  .agent-popup {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 350px;
+      height: 500px;
+      background-color: #fff;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+      z-index: 9999;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .agent-popup.show {
+      display: block;
+      opacity: 1;
+      transform: scale(1);
+  }
+  .agent-popup-header {
+      position: sticky;
+      display: flex;
+      justify-content: space-between;
+      font-family: 'Kanit', sans-serif;
+      top: 0;
+      color: white;
+      background-image: linear-gradient(to right, #604CC3,#3572EF);
+      z-index: 1;
+      padding: 10px;
+  }
+  .agent-popup-content {
+      padding: 20px;
+      overflow-y: auto;
+      height: calc(100% - 150px);
+  }
+  .agent-chat-input {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+     
+  }
+  .agent-chat-input input[type="text"] {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 10px;
+      font-family: 'Kanit', sans-serif;
+  }
+  .agent-chat-input input[type="text"]:focus {
+      outline: none;
+      box-shadow: none;
+
+  }
+  .agent-chat-input .agen-btn-send {
+      background-image: linear-gradient(to right, #604CC3,#3572EF);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: 'Kanit', sans-serif;
+  }
+  .agent-chat-input .agen-btn-send:focus{
+      outline: none;
+      box-shadow: none;
+  }
+  .agent-chat-input .agen-btn-send:active{
+      transform: scale(0.95);
+      background-color: #0056b3;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  }
+  .agent-btn-close {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: transparent;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    .agent-profile-pic-small {
+      width: 40px; 
+      height: 40px; 
+      max-width: 40px;
+      min-width: 40px;
+      max-height: 40px;
+      min-height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 5px;
+      top: 0;
+    }
+    .agent-profile-pic-small img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .agent-message-container {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+    .agent-message-bot {
+      border-radius: 5px;
+      padding: 7px;
+      background-color: #F6F5F2; 
+      color: black;
+      margin-top: 5px;
+      margin-right: auto; 
+      font-family: 'Kanit', sans-serif;
+      word-break: break-all;
+      overflow-wrap: break-word;
+    }
+    .agent-message-bot-suggest {
+      border-radius: 55px;
+      width: 100%;
+      text-align: center;
+      padding: 12px;
+      background-color: white !important; 
+      border: solid 1px #dadad7;
+      color: black;
+      margin-top: 5px;
+      margin-right: auto; 
+      font-family: 'Kanit', sans-serif;
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    }
+    
+    .agent-message-bot-suggest:hover {
+      background-color: #f7f7f3 !important;
+      color: black;
+    }
+    .agent-message-bot-suggest:active{
+      transform: scale(0.95);
+    }
+    .agent-message-user {
+      border-radius: 5px;
+      padding: 7px;
+      background-color: #4CAF50;
+      color: white;
+      margin-left: auto; 
+      font-family: 'Kanit', sans-serif;
+    }
